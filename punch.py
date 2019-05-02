@@ -34,7 +34,6 @@ if sys.argv[1].lower() == "out":
     
     start_time = float(start_string)
     format = '%H:%M:%S'
-    # stop_time = time.time()
     elapsed_time = time.time() - start_time
 
     hours = elapsed_time // seconds_in_hour
