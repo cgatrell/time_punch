@@ -11,7 +11,7 @@ seconds_in_minute = 60
 if len(sys.argv) != 2:
     print("Error\n usage: punch.py in/out")
 
-if sys.argv[1] == "in":
+if sys.argv[1].lower() == "in":
     with open(fileName, 'a', newline='') as fd:
         cur_time = time.time()
         now = datetime.now()
@@ -27,7 +27,7 @@ if sys.argv[1] == "in":
         index_file.close()
 
         
-if sys.argv[1] == "out": 
+if sys.argv[1].lower() == "out": 
     index_file = open("index.txt", 'r')
     start_string = index_file.readline()
     index_file.close()
